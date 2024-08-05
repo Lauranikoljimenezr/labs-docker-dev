@@ -35,3 +35,25 @@ docker.io/library/ubuntu:latest
 Status: Downloaded newer image for python:3.9
 docker.io/library/python:3.9
 
+
+## 2.1. Ejecuta un contenedor de Ubuntu en modo interactivo
+
+ docker run -it ubuntu bash
+
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+...
+root@<container_id>:/
+
+
+## 2.2. Ejecuta un servidor web Apache en segundo plano, mapeando el puerto 8000 del host al puerto 80 del contenedor
+
+
+docker run -d -p 8000:80 httpd
+
+
+Unable to find image 'httpd:latest' locally
+latest: Pulling from library/httpd
+...
+<container_id>
