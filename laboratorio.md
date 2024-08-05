@@ -57,3 +57,18 @@ Unable to find image 'httpd:latest' locally
 latest: Pulling from library/httpd
 ...
 <container_id>
+
+
+## Ejercicio 3.1: Eliminar el contenedor de Ubuntu
+
+```sh
+docker rm 8ed70b67aa5f
+
+
+## Ejercicio 3.2: Eliminar todos los contenedores detenidos
+
+```sh
+docker container prune
+
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N]
