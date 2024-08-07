@@ -161,4 +161,25 @@ docker build -t my-nginx:latest .
  => => naming to docker.io/library/my-nginx:latest   
 
 
+ #### Tema 2: Instrucciones comunes en Dockerfile
+
+## Ejercicio 1: Copiar un archivo HTML local a una imagen de Nginx
+
+docker build -t ubuntu-updated:latest .
+
+[+] Building 2.5s (7/7) FINISHED                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                       0.0s
+ => => transferring dockerfile: 93B                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                                            0.0s
+ => [internal] load .dockerignore                                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [internal] load build context                                                                                                                          0.4s
+ => => transferring context: 31B                                                                                                                           0.0s
+ => [1/2] FROM docker.io/library/nginx:latest                                                                                                              0.7s
+ => [2/2] COPY index.html /usr/share/nginx/html/                                                                                                           0.2s
+ => exporting to image                                                                                                                                     1.1s
+ => => exporting layers                                                                                                                                    1.0s
+ => => writing image sha256:92582fde6b3c7fe01e08c572db20b564e595d8043a6fd4064d4518b281cb9459                                                               0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest
+
  
