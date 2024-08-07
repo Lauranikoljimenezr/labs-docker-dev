@@ -114,4 +114,30 @@ docker build -t ubuntu-updated:latest .
  => => exporting layers                                                                                                                                    0.5s
  => => writing image sha256:6538f7d26fd5a0df6d20ebba08aa96125529b3b57f80b16fbb75f0b01bc70631                                                               0.0s
  => => naming to docker.io/library/ubuntu-updated:latest  
- 
+
+
+ ##Ejercicio 4: Construir y ejecutar la imagen de Nginx
+
+ Construir:
+
+ docker build -t my-nginx:latest .
+
+ [+] Building 0.4s (6/6) FINISHED                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                       0.0s
+ => => transferring dockerfile: 137B                                                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                                           0.0s
+ => [internal] load .dockerignore                                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                                                                                                             0.0s
+ => CACHED [2/2] RUN apt-get update && apt-get install -y nginx                                                                                            0.0s
+ => exporting to image                                                                                                                                     0.1s
+ => => exporting layers                                                                                                                                    0.0s
+ => => writing image sha256:6538f7d26fd5a0df6d20ebba08aa96125529b3b57f80b16fbb75f0b01bc70631                                                               0.0s
+ => => naming to docker.io/library/my-nginx:latest 
+
+ Ejecutar:
+
+ docker run -d -p 80:80 my-nginx:latest
+
+9ab81f82d6969477b26279c9e302e009d2bb7075ef32806b58c8c4b51445207a
+
