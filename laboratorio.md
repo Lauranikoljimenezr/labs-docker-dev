@@ -72,3 +72,25 @@ docker container prune
 
 WARNING! This will remove all stopped containers.
 Are you sure you want to continue? [y/N]
+
+## Ejercicio 1: Crear un Dockerfile simple con Ubuntu y actualizar paquetes
+FROM ubuntu:latest
+RUN apt-get update && apt-get upgrade -y
+
+Comando para construir:
+
+ docker build -t ubuntu-updated:latest .
+
+[+] Building 9.7s (6/6) FINISHED                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                       0.0s
+ => => transferring dockerfile: 96B                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                                           0.0s
+ => [internal] load .dockerignore                                                                                                                          0.1s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                                                                                                             0.1s
+ => [2/2] RUN apt-get update && apt-get upgrade -y                                                                                                         8.4s
+ => exporting to image                                                                                                                                     0.7s
+ => => exporting layers                                                                                                                                    0.6s
+ => => writing image sha256:2dad02e0bf7806b5b548c5cd0d273930516f417aef367c7a735b430a1a4f2857                                                               0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest
+   
