@@ -185,7 +185,7 @@ docker build -t ubuntu-updated:latest .
  ## Ejercicio 2: Usar WORKDIR y copiar un archivo
 
  $ docker build -t ubuntu-updated:latest .
- 
+
  [+] Building 1.4s (8/8) FINISHED                                                                                                                 docker:default
  => [internal] load build definition from Dockerfile                                                                                                       0.0s
  => => transferring dockerfile: 86B                                                                                                                        0.0s
@@ -200,4 +200,24 @@ docker build -t ubuntu-updated:latest .
  => exporting to image                                                                                                                                     0.5s
  => => exporting layers                                                                                                                                    0.4s
  => => writing image sha256:fcf68dd1297c0bfa26a85908f2ddf6e101ca16a443500ccd29650046597ea8a1                                                               0.0s
+ => => naming to docker.io/library/ubuntu-updated:latest 
+
+ ## Ejercicio 3: Ejecutar un script Python al iniciar el contenedor
+
+ docker build -t ubuntu-updated:latest .
+ 
+[+] Building 4.4s (8/8) FINISHED                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                       0.1s
+ => => transferring dockerfile: 110B                                                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/python:3.9                                                                                              0.0s
+ => [internal] load .dockerignore                                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                            0.0s
+ => [1/3] FROM docker.io/library/python:3.9                                                                                                                0.8s
+ => [internal] load build context                                                                                                                          0.2s
+ => => transferring context: 30B                                                                                                                           0.0s
+ => [2/3] WORKDIR /app                                                                                                                                     0.2s
+ => [3/3] COPY script.py .                                                                                                                                 0.2s
+ => exporting to image                                                                                                                                     2.7s
+ => => exporting layers                                                                                                                                    2.5s
+ => => writing image sha256:c9af6ce2cb28e9ac1e535eddd031c809ccb6fc5fdad7388655dfc55ebb7c77d5                                                               0.0s
  => => naming to docker.io/library/ubuntu-updated:latest 
